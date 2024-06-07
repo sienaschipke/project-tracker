@@ -5,6 +5,7 @@ const myModal = $("#formModal");
 const taskTitleEl = $("#task-title");
 const taskDateEl = $("#task-date");
 const taskDescriptionEl = $("#task-description");
+const todoCardsEl = $("#todo-cards");
 
 // Retrieve tasks and nextId from localStorage
 let taskList = JSON.parse(localStorage.getItem("tasks"));
@@ -19,6 +20,15 @@ function generateTaskId() {
 // Todo: create a function to create a task card
 function createTaskCard(task) {
     console.log(task);
+    const tagCard = $(`<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-header">${task.title}</h5>
+      <p class="card-text">${task.description}</p>
+      <p class="card-date">${dayjs(task.date).format('MM/DD/YY')}</p>
+      <a href="#" class="btn btn-primary">Delete</a>
+    </div>
+  </div>`);
+    todoCardsEl.append(tagCard);
 }
 
 // Todo: create a function to render the task list and make cards draggable
@@ -31,10 +41,10 @@ function handleAddTask(event){
     event.preventDefault();
     
     let task = {
-        taskId: generateTaskId(),
-        taskTitle: taskTitleEl.val(),
-        taskDate: taskDateEl.val(),
-        taskDesc: taskDescriptionEl.val()
+        id: generateTaskId(),
+        title: taskTitleEl.val(),
+        date: taskDateEl.val(),
+        description: taskDescriptionEl.val()
     };
     
     createTaskCard(task);
