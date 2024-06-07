@@ -14,3 +14,15 @@ body {
 .task-card:hover {
   cursor: grab;
 }
+
+
+/* #form-container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 50%;
+  margin-top: 25px;
+  justify-content: center;
+  align-items: center;
+} */
