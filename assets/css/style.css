@@ -15,14 +15,19 @@ body {
   cursor: grab;
 }
 
-
-/* #form-container {
-  background-color: white;
+.modal-body form {
   display: flex;
   flex-direction: column;
-  width: 50%;
-  height: 50%;
-  margin-top: 25px;
-  justify-content: center;
-  align-items: center;
-} */
+}
+
+#title-and-date {
+  display: flex;
+}
+
+#task-title, #task-date, #task-description {
+  margin: 10px;
+}
+
+#task-description {
+  height: 50px;
+}
