@@ -1,7 +1,7 @@
 // DEPENDENCIES
 const firstAddTaskBtn = $(".btn");
 const secondAddTaskBtn = $("#task-btn");
-const modal = $(".modal-content");
+const myModal = $("#myModal");
 
 // Retrieve tasks and nextId from localStorage
 let taskList = JSON.parse(localStorage.getItem("tasks"));
@@ -15,7 +15,7 @@ function generateTaskId() {
 
 // Todo: create a function to create a task card
 function createTaskCard(task) {
-    
+
 }
 
 // Todo: create a function to render the task list and make cards draggable
@@ -25,9 +25,9 @@ function renderTaskList() {
 
 // Todo: create a function to handle adding a new task
 function handleAddTask(event){
-    event.preventDefault();
-    console.log("TEST");
-    modal.modal('show');
+    // event.preventDefault();
+    // console.log(event);
+    myModal.modal("show");
 }
 
 // Todo: create a function to handle deleting a task
